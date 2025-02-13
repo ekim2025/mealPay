@@ -8,7 +8,6 @@ public class Transaction{
         month = month;
         day = day;
         amount = amount;
-        studentId = studentId;
     }
 
     public int getMonth(){
@@ -27,9 +26,6 @@ public class Transaction{
         return amount;
     }
 
-    public int getStudentId() {
-        return studentId;
-    }
 
     public String toString(){
         return "(" + month + "/" + day + ", $" + amount + ") by Student ID: " + studentId;
