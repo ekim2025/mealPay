@@ -1,16 +1,26 @@
 public class Transaction{
-    private String date;
+    private int month;
+    private int day;
     private double amount;
     private int studentId;
 
-    public Transaction(String date, double amount, int studentId) {
-        date = date;
+    public Transaction(int month, int day, double amount, int studentId) {
+        month = month;
+        day = day;
         amount = amount;
         studentId = studentId;
     }
 
+    public int getMonth(){
+        return month;
+    }
+
+    public int getDay(){
+        return day;
+    }
+
     public String getDate(){
-        return date;
+        return month + "/" + day;
     }
 
     public double getAmount(){
@@ -19,6 +29,10 @@ public class Transaction{
 
     public int getStudentId() {
         return studentId;
+    }
+
+    public String toString(){
+        return "(" + month + "/" + day + ", $" + amount + ") by Student ID: " + studentId;
     }
 
 }
