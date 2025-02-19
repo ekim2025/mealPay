@@ -13,6 +13,7 @@ public class Student{
         balance = 0;
         id = idGen;
         idGen++;
+        transactions = new ArrayList<Transaction>();
     }
 
 
