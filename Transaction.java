@@ -4,7 +4,7 @@ public class Transaction{
     private double amount;
     private int studentId;
 
-    public Transaction(int month, int day, double amount, int studentId) {
+    public Transaction(int month, int day, double amount) {
         month = month;
         day = day;
         amount = amount;

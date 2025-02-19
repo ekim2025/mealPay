@@ -16,6 +16,42 @@ public class Student{
         transactions = new ArrayList<Transaction>();
     }
 
+    //all the fun methods oooooh
+
+
+    public void chargeLunch(int month, int day){
+        balance -= 7; //hard code for lunch amount
+        Transaction t = new Transaction(month, day, -7);
+        transactions.add(t);
+    }
+
+    //return null if no transactions on given day
+
+    public ArrayList<Transaction> datedTransactions(int month, int day){
+        ArrayList<Transaction> givenDay = new ArrayList<Transaction>();
+        for(Transaction t : transactions){
+            if(month == t.getMonth() && day == t.getDay()){
+                givenDay.add(t);
+            }
+        }
+        if(givenDay.size() == 0){
+            return null;
+        }else{
+            return givenDay;
+        }
+        
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getID() {
+        return id;
+    }
+
+
+
 
 
 
