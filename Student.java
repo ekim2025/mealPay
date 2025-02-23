@@ -18,12 +18,17 @@ public class Student{
 
     //all the fun methods oooooh
 
-
-    public void chargeLunch(int month, int day){
-        balance -= 7; //hard code for lunch amount
-        Transaction t = new Transaction(month, day, -7);
-        transactions.add(t);
+    // charge lunch: - $7 and record a transaction.
+    public void chargeLunch(int monthValue, int dayValue) {
+        balance -= 7; // lunch always costs $7
+        transactions.add(new Transaction(monthValue, dayValue, -7, id));
     }
+
+    public void addFunds(int monthValue, int dayValue, double amountValue) {
+        balance += amountValue;
+        transactions.add(new Transaction(monthValue, dayValue, amountValue, id));
+    }
+
 
     //return null if no transactions on given day
 
@@ -50,11 +55,9 @@ public class Student{
         return id;
     }
 
-
-
-
-
-
+    public double getBalance(){
+        return balance;
+    }
 
 
 

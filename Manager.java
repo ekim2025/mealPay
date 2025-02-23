@@ -9,6 +9,23 @@ public class Manager{
 
     }
 
+    public void addStudent(String name) { 
+        students.add(new Student(name)); 
+    }
+
+    public Student findStudent(int id) {
+        for (Student s : students) {
+            if (s.getID() == id) return s;
+        }
+        return null;
+    }
+
+    public void displayNegativeBalances() {
+        for (Student s : students) {
+            if (s.getBalance() < 0) System.out.println(s);
+        }
+    }
+
     public String datedTransactions(int month, int day){
         String s = " ";
         for(Student st : students){
@@ -21,9 +38,21 @@ public class Manager{
         return s;
     }
     
+
+    public void displayAllStudents() {
+        for (Student s : students) {
+            System.out.println(s);
+        }
+    }
     
-    public void logmeal(int month, int day, int id){
-        //loop through all students and find matching id
+    public void logMeal(int month, int day, int id) {
+        for (Student s : students) {
+            if (s.getID() == id) {
+                s.chargeLunch(month, day);
+                return;
+            }
+        }
     }
 }
+
 

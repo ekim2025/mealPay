@@ -1,34 +1,37 @@
-public class Transaction{
+public class Transaction {
     private int month;
     private int day;
     private double amount;
     private int studentId;
 
-    public Transaction(int month, int day, double amount) {
-        month = month;
-        day = day;
-        amount = amount;
+    public Transaction(int myMonth, int myDay, double myAmount, int myStudentId) {
+        month = myMonth;
+        day = myDay;
+        amount = myAmount;
+        studentId = myStudentId;
     }
 
-    public int getMonth(){
+    public int getMonth() {
         return month;
     }
 
-    public int getDay(){
+    public int getDay() {
         return day;
     }
 
-    public String getDate(){
+    public String getDate() {
         return month + "/" + day;
     }
 
-    public double getAmount(){
+    public double getAmount() {
         return amount;
     }
 
-
-    public String toString(){
-        return "(" + month + "/" + day + ", $" + amount + ") by Student ID: " + studentId;
+    public int getStudentId() {
+        return studentId;
     }
 
+    public String toString() {
+        return "(" + month + "/" + day + ", $" + amount + ") by Student ID: " + studentId;
+    }
 }
