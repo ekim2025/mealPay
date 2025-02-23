@@ -22,10 +22,11 @@ public class Manager{
 
     public void displayNegativeBalances() {
         for (Student s : students) {
-            if (s.getBalance() < 0) System.out.println(s);
+            if (s.getBalance() < 0) {
+                System.out.println(s + "\n"); 
+            }
         }
     }
-
     public String datedTransactions(int month, int day){
         String s = " ";
         for(Student st : students){
@@ -41,10 +42,11 @@ public class Manager{
 
     public void displayAllStudents() {
         for (Student s : students) {
-            System.out.println(s);
+            System.out.println(s + "\n"); 
         }
     }
-    
+
+
     public void logMeal(int month, int day, int id) {
         for (Student s : students) {
             if (s.getID() == id) {

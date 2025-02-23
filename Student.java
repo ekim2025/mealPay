@@ -60,10 +60,16 @@ public class Student{
     }
 
 
-
-    public String toString(){
-        return "Name: " + name + " ID: " + id + " Balance: " + balance + " Transactions: " + transactions;
+    public String toString() {
+        String s = "Student: " + name + "  ID: " + id + "  Balance: $" + balance + "\nTransactions:";
+        if (transactions.isEmpty()) {
+            s += " None";
+        } else {
+            for (Transaction t : transactions) {
+                s += "\n   " + t;
+            }
+        }
+        return s;
     }
-    
 
 }
