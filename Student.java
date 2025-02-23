@@ -62,7 +62,7 @@ public class Student{
 
 
     public String toString(){
-        return "Name: " + name + "ID: " + id + "Balance: " + balance + "Transactions: " + transactions;
+        return "Name: " + name + " ID: " + id + " Balance: " + balance + " Transactions: " + transactions;
     }
     
 
